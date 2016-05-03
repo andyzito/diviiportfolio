@@ -178,13 +178,6 @@ body.spring #navbar-container li:hover, body.spring #dropdown{
 	font-size:11px;
 }
 
-#artificial-intelligence, #compling{
-	border-bottom-left-radius:5px;
-}
-
-#semantics, #programming-science{
-	border-bottom-right-radius:5px;
-}
 /*END Navbar*/
 
 body.fall{
