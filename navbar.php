@@ -1,4 +1,4 @@
-<a id="back" href="index.php"></a>
+<a id="back" href="index.php"><img src="leftarrow.png"></a>
 <div id="navbar-container">
 
 <ul class="navbar n1">
@@ -26,5 +26,5 @@
 <a href="syntax.php"><li id="syntax"><span>Introduction to Syntax</span></li></a>
 <a href="semantics.php"><li id="semantics"><span>A Theory of Meaning</span></li></a>
 </ul>
-<div id="dropdown">V</div>
+<div id="dropdown"></div>
 </div>
