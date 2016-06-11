@@ -14,8 +14,8 @@
 <ul class="navbar fall">
 <a href="artificialintelligence.php"><li id="artificial-intelligence"><span>Artificial Intelligence</span></li></a>
 <a href="chinese1.php"><li id="chinese-1"><span>Intermediate Chinese I</span></li></a>
-<a href="csissues.php"><li id="cs-issues"><span>Current Issues in Cognitive Science</span></li></a>
-<a href="performatives.php"><li id="performatives"><span>Advanced Seminar: Performative Utterances</span></li></a>
+<a href="csissues.php"><li id="cs-issues"><span>Current Issues in CS</span></li></a>
+<a href="performatives.php"><li id="performatives"><span>Performative Utterances</span></li></a>
 <a href="programmingscience.php"><li id="programming-science"><span>Programming for Science</span></li></a>
 </ul>
 

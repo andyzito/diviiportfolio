@@ -5,10 +5,10 @@ body{
 }
 
 #main{
-	width:80%;
-	height:100%;	
+	width:90%;
+	height:100%;
 	display:inline-block;
-	margin-left:10%;
+	margin-left:5%;
 	transition:width 0.5s, margin 0.5s;
 }
 
@@ -87,7 +87,7 @@ body.spring #main {
 	display: inline-block;
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 110px;
 	text-decoration:none;
 	border-radius:2px;
 }
@@ -120,10 +120,6 @@ body.spring #main {
 	border-bottom-right-radius:5px;
 }
 
-body.spring #navbar-container #dropdown{
-	background-image:url(down-arrow-s.png);
-}
-
 #navbar-container{
 	display:inline-block;
 	width:100%;
@@ -143,35 +139,43 @@ body.spring #navbar-container #dropdown{
 	float:left;
 	font-size:18px;
 	text-align:center;
-	font-family:sans-serif;
-	transition:background-color 0.2s;
+	font-family:'Josefin Sans',sans-serif;
+	font-weight:400;
+	letter-spacing:1.5px;
+	transition:background-color 0.2s,color 0.2s;
 	cursor:pointer;
-	font-weight:bold;
 	height:50px;
+	width:20%;
+	color:black;
+}
+
+#navbar-container .n1 li {
+	font-size:23px;
+	letter-spacing:3px;
 }
 
 body.fall #navbar-container{
-	background-color:#FFCD70;
+	background-color:#fff9e6;
 }
 
 body.spring #navbar-container{
-	background-color:#2DA800;
+	background-color:#ecffe6;
 }
 
-body.fall #navbar-container li{
+/* body.fall #navbar-container li{
 	color:#4d1f00;
 }
 
 body.spring #navbar-container li {
-	color:white;
+	color:#003300;
+} */
+
+body.fall #navbar-container li:hover, body.fall #navbar-container #dropdown:hover{
+	background-color:#FFBC8F;
 }
 
-body.fall #navbar-container li:hover, body.fall #dropdown{
-	background-color:#FF8E42;
-}
-
-body.spring #navbar-container li:hover, body.spring #dropdown{
-	background-color:#1E7300;
+body.spring #navbar-container li:hover, body.spring #navbar-container #dropdown:hover{
+	background-color:#9CDB85;
 }
 #navbar-container ul.navbar li span{
 	position:relative;
@@ -186,16 +190,6 @@ body.spring #navbar-container li:hover, body.spring #dropdown{
 
 #navbar-container ul.navbar.n1 #retrospectives li{
 	width:33.3333333333333333333333%;
-}
-
-#navbar-container ul.navbar.fall li{
-	width:20%;
-	font-size:11px;
-}
-
-#navbar-container ul.navbar.spring li{
-	width:20%;
-	font-size:11px;
 }
 
 /*END Navbar*/
@@ -229,12 +223,13 @@ body.spring div.overlay{
 }
 
 body.main p {
-	font-size:70px;
+	font-size:90px;
 	display:block;
 	opacity:0.2;
 	margin:auto;
 	text-align:center;
-	font-family:sans-serif;
+	font-family:'Josefin Sans',sans-serif;
+	font-weight:700;
 	width:65%;
 	position:relative;
 	top:50%;
@@ -257,7 +252,7 @@ body.chinese-1 #chinese-1,
 body.cs-issues #cs-issues,
 body.performatives #performatives,
 body.programming-science #programming-science{
-	background-color:#FF8E42 !important;
+	background-color:#FFBC8F !important;
 }
 
 body.spring #spring-link,
@@ -266,7 +261,7 @@ body.chinese-2 #chinese-2,
 body.phonology #phonology,
 body.syntax #syntax,
 body.semantics #semantics {
-	background-color:#1E7300 !important;
+	background-color:#9CDB85 !important;
 }
 
 body.spring #navbar-container ul.fall,
@@ -283,7 +278,14 @@ body.fall #navbar-container ul.spring{
 	width:97%;
 	margin-left:auto;
 	margin-right:auto;
-	background-color:rgba(255,255,255,1)
+}
+
+body.fall #content {
+	background-color:#fff9e6;
+}
+
+body.spring #content {
+	background-color:#ecffe6;
 }
 
 #content div{
@@ -292,7 +294,7 @@ body.fall #navbar-container ul.spring{
 	padding-right:50px;
 	padding-top:20px;
 	padding-bottom:30px;
-	font-family:sans-serif;
+	font-family:'Raleway',sans-serif;
 }
 
 #content p{
@@ -301,7 +303,7 @@ body.fall #navbar-container ul.spring{
 }
 
 body.fall.main #content, body.spring.main #content{
-	background-color:rgba(255,255,255,0.6);
+	background-color:rgba(255,255,255,0.5);
 }
 
 @media screen and (max-width:800px){
