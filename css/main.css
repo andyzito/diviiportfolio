@@ -3,22 +3,44 @@
 	padding:0;
 }
 
-div {
+.section {
 	height:100%;
 	position:relative;
 }
 
-.fall.main {
+#fall-main {
 	background-image:url("../image/autumnpark.jpg");
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:cover;
-	width:100%;
-	height:100%;
+}
+
+#spring-main {
+	background-image:url("../image/springtime.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
 }
 
 .fall {
 	background-color:orange;
+}
+
+.spring {
+	background-color:green;
+}
+
+p {
+	display:inline-block;
+	position:relative;
+	font-family:sans-serif;
+	font-size:2em;
+	top:50%;
+	transform:translate(-50%,-50%);
+	margin-left:50%;
+	color:white;
+	text-transform:uppercase;
+	text-align:center;
 }
 
 .arrow {
@@ -33,4 +55,24 @@ div {
 
 .down.arrow {
 	bottom:0;
+}
+
+#sidenav {
+	position:fixed;
+	z-index:5;
+	margin-left:1%;
+	font-size:2.5em;
+	line-height:52px;
+	width:3%;
+	height:100%;
+}
+
+#sidenav-fall div, #sidenav-spring div {
+	display:inline-block;
+	width:100%;
+	padding-top:100%;
+	background-color:white;
+	float:left;
+	margin-top:35%;
+	border-radius:50%;
 }
