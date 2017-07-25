@@ -1,0 +1,3 @@
+Death is not as binary as we often assume. In between the black and white of life and afterlife there is a great deal of grey. In this course we delved deep into this grey area and beyond -- and how we deal with our own inescapable morality.
+
+These files are largely response to readings (Journals), except for the midterm essays (Midterm), which were responses to specific prompts (long since forgotten). You, the reader, will get more out of simply reading them than trying to compare them to their source material. This goes for the final paper (DeathFinal.pdf) as well.

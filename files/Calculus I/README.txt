@@ -1,0 +1,1 @@
+These three manuscripts are short papers on concepts of calculus.

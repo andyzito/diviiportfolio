@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+	font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 20px 0 10px;
+  	padding: 0;
+  	font-weight: bold;
+  	-webkit-font-smoothing: antialiased;
+  	cursor: text;
+  	position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+	font-size: 28px;
+    border: 3px solid #892034; 
+    color: black;
+	text-align:right;
+}
+
+h2 {
+	font-size: 24px;
+	background-color:#892034; 
+    color: white; 
+}
+
+h3 {
+	font-size: 18px;
+    border-bottom: 1px solid #892034;
+	color: black; 
+}
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; 
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+
+
+</style>
+<title>LINGUIST492A: Homework #1</title>
+
+</head>
+<body>
+<h1>LINGUIST492A: Homework #1</h1>
+
+<h2>Creating and analyzing a twitter corpus</h2>
+
+<p>In this assignment, you will create a corpus of tweets that you pull directly from <a href="http://www.twitter.com">Twitter</a> yourself. The primary goals of this homework are to learn basic techniques for creating and managing corpus resources in Python, reading data into and out of Python, tokenizing and scrubbing internet text, doing rudimentary frequency counts, and analyzing the results.</p>
+
+<h3>Getting started: Installation</h3>
+
+<p>The first step in getting started is to have <a href="http://www.python.org">Python</a> installed. <strong>For this class, you must install Python 2.7.x</strong>. If you are unsure which version of Python you have, open your command prompt: it should say which version you're working with. If you need to change from Python 3 to Python 2 for this class and are having a hard time, come to office hours!</p>
+
+<p>You must also register for a <a href="http://www.twitter.com">Twitter</a> account if you do not already have one.</p>
+
+<p>Once you have Python and Twitter installed, there are several libraries that you must install for this assignment. First, and most importantly, you should install  <code>pip</code>, a package for managing packages in Python. <code>pip</code> will make installing new packages for Python a snap. To install it, visit <a href="https://pip.pypa.io/en/stable/installing/">this page</a> and follow the instructions. If you have a hard time installing <code>pip</code>, please contact me or Alan ASAP.</p>
+
+<p>Once you've installed <code>pip</code>, you can install the critical library for this assigment: <a href="http://tweepy.readthedocs.org/en/v3.2.0/">Tweepy</a>. Tweepy is a package that allows you to manage a Twitter API through Python, and it's how we're going to pull tweets off of Twitter in real time. An API (<em>Application Programming Interface</em>) is a library or set of routines that allow you to interact with an application for the purposes of software development. In this instance, the API is what will allow us to write Python scripts that interact with Twitter. To install <code>tweepy</code>, simply open a terminal prompt on your machine, and type:</p>
+
+<pre><code>    pip install tweepy
+</code></pre>
+
+<p>(Note that you may need to ensure you have appropriate permissions to do this.) To check that the installation went smoothly, check the output of the <code>pip</code> call, and then open a Python prompt, type <code>import tweepy</code>, and check that it loads.</p>
+
+<h3>Getting started: Setting up authentification</h3>
+
+<p>The next step in getting set up is to set up an 'application' so that you can access Twitter without directly using your username or password in your scripts. This will allow you to use the <a href="http://oauth.net">OAuth</a> protocol with your Twitter API. Setting this up is simple. Step by step:</p>
+
+<ul>
+<li>Log into Twitter</li>
+<li>Go to <a href="http://apps.twitter.com">Twitter Apps</a></li>
+<li>Click on 'Create new app,' and fill in details. Note that you do <em>not</em> need a website for this, though you do need to put something in that field. Create your application.</li>
+<li>On your application's page, find the tab called 'Keys and Access Tokens', and click on it.</li>
+<li>You should see a section titled 'Application Settings', which contains a field for your <strong>Consumer Key</strong> and your <strong>Consumer Secret</strong>. Write these down.</li>
+<li>At the bottom of this page, find a button that says 'Create my access token'; click it.</li>
+<li>Under the part of the page that says 'Your Access Token', you should find an <strong>Access Token</strong> and an <strong>Access Secret</strong>. Write these down.</li>
+</ul>
+
+
+<p>Once you have your <strong>Consumer Key</strong>, <strong>Consumer Secret</strong>, <strong>Access Token</strong> and  <strong>Access Secret</strong>, you have all you need to access Twitter using your account from the API. <em>This information allows the API to log into your twitter account. You should not share this information with anyone, and you do not need to turn it in for this assignment.</em></p>
+
+<h3>Part 1: Create your corpus</h3>
+
+<p>In the zip file for this HW assigment, you should find a script called <code>scrapeTwitter.py</code>. Open this script in your text editor. There are three parts of this script that you must edit:</p>
+
+<ul>
+<li>You must input your authentification credentials, which you obtained above.</li>
+<li>You must create a list of strings called <code>keyword_list</code>, which contains terms you are searching for. Your Twitter scraper will record tweets that contain these terms.</li>
+<li>You must set the desired value for <code>N</code> on line 59; this is the number of tweets you will record.</li>
+</ul>
+
+
+<p>Set up your scraper to look for 5 tweets that contain a word whose behavior you want to study. Once the script has finished running, inspect the contents of <code>my_tweet_corpus.json</code>, which contain your tweets stored as objects in the the <a href="http://www.json.org">JSON</a> format. JSON objects have syntax that is identical to, and parsed as, dictionaries in Python. Open your corpus in a text editor, and check that it has reasonable looking data. You should see data from five tweets, represented in a way akin to Python dictionaries, as a series of <em>key</em>:<em>value</em> pairs representing critical data about the tweet. Find the <em>text</em> field, and confirm that each tweet does in fact contain your desired search terms.</p>
+
+<p>Once you are satisfied that your scraper is working appropriately, set your N to 50,000, and create a twitter corpus that consists of 50,000 tweets containing your term. Depending on how rare your search terms are, this could take quite a while, so plan ahead!</p>
+
+<p><strong>Deliverable for Part 1</strong>: Turn in your 50,000-tweet twitter corpus in the json format. <em>Do not turn in your edited scrapeTwitter.py file!</em></p>
+
+<h3>Part 2: Tokenize and clean your corpus</h3>
+
+<p>When you look at your tweets, you will immediately see they are quite full of noise. Write a script that will load your corpus, 'scrub' it, and save a new 'cleaned' version of your corpus. Your script should:</p>
+
+<ul>
+<li>Remove retweet markers (<code>RT</code>), usernames beginning with <code>@</code>, hashtags, emojis, and html links</li>
+<li>Tokenize the tweets, representing each tweet's text as a list of words</li>
+<li>Remove stopwords</li>
+<li>Lowercase all words</li>
+</ul>
+
+
+<p>Tokenizing and removing stopwords will involve making judgment calls on your part about what counts as a 'word,' and what counts as a 'stopword.' Consult Manning &amp; Schütze Chapter 4 on this point.</p>
+
+<p>Your script should save a version of your corpus in JSON format that contains an additional field called <code>tweet_parsed</code>, which is a list of the tokenized words in the tweet after it has been appropriately cleaned.</p>
+
+<p><strong>Deliverable for Part 2</strong>: Turn in your script that creates a scrubbed corpus from your original corpus file. Inside this script, use comments to include a brief discussion that discusses the tokenizing choices you made, and why.</p>
+
+<h3>Part 3: Analyze your corpus</h3>
+
+<p>Write a script that will analyze the scrubbed corpus. Your script should:</p>
+
+<ul>
+<li>Compute the frequency of all words in your corpus. Represent your frequency tabulation as a dictionary, with words as the keys, and with frequency counts as the values</li>
+<li>Compute the <em>relative</em> frequency of all words in your corpus. Adopt the same dictionary representation as for your frequency counts</li>
+<li>Compute the <em>lexical diversity</em> of your corpus, defined as the ratio of unique word types to word tokens</li>
+<li>Find the <code>n</code> most frequent words in your corpus (<code>n</code> is a free parameter that a user should be able to specify), and calculate what proportion of word tokens in your corpus these <code>n</code> words jointly account for</li>
+</ul>
+
+
+<p>In your script, define a separate function for each of these tasks. Apply these functions to your data, and inspect the results.</p>
+
+<p><strong>Deliverable for Part 3</strong>: Turn in your script that contains these functions, and code that applies these functions to your scrubbed corpus. Inside this script, use comments to to address the following questions. How lexically diverse is your corpus, and what does this value mean? What are the 10 most common words in your tweets, and how many of the word tokens in your corpus do these 10 words account for? Offer your informal linguistic observations about why these words co-occur so frequently with the term you searched for.</p>
+</body>
+</html>
