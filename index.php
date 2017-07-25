@@ -1,24 +1,50 @@
+<!DOCTYPE HTML>
 <html>
 <body>
-<?php include "header.php";
-$sections=array('fall-main','artificial-intelligence','chinese-1','cs-issues','performatives','programming-science','spring-main','comp-ling','chinese-2','phonology','syntax','semantics');
-$current_section=0;
-$sem='fall';
-$contents=array('fall-main' => 'Fall 2015', 'artificial-intelligence' => 'Artificial Intelligence', 'chinese-1' => 'Intermediate Chinese I', 'cs-issues' => 'Current Issues in Cognitive Science', 'performatives' => 'Performative Utterances', 'programming-science' => 'Programming for Science', 'spring-main' => 'Spring 2016', 'comp-ling' => 'Computational Linguistics', 'chinese-2' => 'Intermediate Chinese II', 'phonology' => 'Speech Sounds and Structure', 'syntax' => 'Introduction to Syntax', 'semantics' => 'A Theory of Meaning');?>
-<div id="main">
-<?php include "sidenav.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php $sem='spring'; include "section-template.php"; ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
-<?php include "section-template.php" ?>
+<?php include "header.php"; 
+include "main.php";
+$arrs=array(0,0,0,0);
+?>
+<div id="menu-container">
+	<div id="menu-icon"></div>
+	<ul id="menu">
+	<a href="https://drive.google.com/open?id=0ByxFokfIIBmXNjdhZTl1RHk5anc"><li>See all files</li></a>
+	<a href="#splash" target="_self"><li>Front Page</li></a>
+	<a href="#simons-rock" target="_self"><li>Simon's Rock</li></a>
+	<a href="#fall-main" target="_self"><li>Fall 2015</li></a>
+	<a href="#spring-main" target="_self"><li>Spring 2016</li></a>
+	<a href="#retrospective" target="_self"><li>Retrospective</li></a>
+	</ul>
 </div>
+<div id="main">
+<div class="up arrow show"></div>
+<div class="left arrow"></div>
+<div class="right arrow"></div>
+<div class="down arrow show"></div>
+<?php
+$sem='intro';
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+$sem='fall';
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+$sem='spring';
+// include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+include "section-template.php";
+?>
+</div>
+<!DOCTYPE HTML>
 </body>
 </html>

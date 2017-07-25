@@ -1,15 +1,34 @@
 <?php
-$prev_section=$sections[$current_section-1];
-$this_section=$sections[$current_section];
-$content=$contents[$this_section];
+$sectionnames = array_keys($sections);
+$prev_section=$sectionnames[$current_section-1];
+$this_section=$sectionnames[$current_section];
+$content=$sections[$this_section];
 $current_section=$current_section+1;
-$next_section=$sections[$current_section];
+$next_section=$sectionnames[$current_section];
 ?>
 
-<div id="<?php echo $this_section ?>" class="<?php echo $sem ?> section">
-	<div class="up arrow" href="#<?php echo $prev_section ?>"></div>
-	<div class="left arrow"></div>
-	<p><?php echo $content ?></p>
-	<div class="right arrow"></div>
-	<div class="down arrow" href="#<?php echo $next_section ?>"></div>
-</div>
+<section id="<?php echo $this_section ?>" class="<?php echo $sem ?> v">
+	<?php
+		if ($arrs[0]) {
+			echo '<div class="up arrow" href="#'.$prev_section.'"></div>';
+		};
+		if ($arrs[1]) {
+			echo '<div class="left arrow"></div>';
+		};
+		
+		foreach ($content as $section => $value) {
+			echo "<section class='".$section." h'>";
+			foreach ($value as $piece => $stuff) {
+				echo "<p class='".$piece."'>".$stuff."</p>";
+			}
+			echo "</section>";
+		}
+		
+		if ($arrs[2]) {
+			echo '<div class="right arrow"></div>';
+		}
+		if ($arrs[3]) {
+			echo '<div class="down arrow" href="#'.$next_section.'"></div>';
+		}
+		?>
+</section>
