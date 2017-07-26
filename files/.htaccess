@@ -1,4 +1,5 @@
 Options +Indexes
-IndexOptions SuppressDescription IgnoreCase FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=* SuppressHTMLPreamble Charset=UTF-8
+IndexStyleSheet file.css
+IndexOptions AddAltClass IconsAreLinks SuppressLastModified SuppressRules HTMLTable SuppressDescription IgnoreCase FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=* SuppressHTMLPreamble Charset=UTF-8
 IndexIgnore file.css header.html htaccess_propogate.sh all_files.zip
 HeaderName /files/header.html
