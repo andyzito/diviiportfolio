@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<?php include "header.php"; 
+<?php include "header.php";
 include "main.php";
 $arrs=array(0,0,0,0);
 ?>
 <div id="menu-container">
 	<div id="menu-icon"></div>
 	<ul id="menu">
-	<a href="https://drive.google.com/open?id=0ByxFokfIIBmXNjdhZTl1RHk5anc"><li>See all files</li></a>
+	<a href="/files" target="_self"><li>See all files</li></a>
 	<a href="#splash" target="_self"><li>Front Page</li></a>
 	<a href="#simons-rock" target="_self"><li>Simon's Rock</li></a>
 	<a href="#fall-main" target="_self"><li>Fall 2015</li></a>

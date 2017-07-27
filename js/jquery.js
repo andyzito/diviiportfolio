@@ -3,7 +3,7 @@ $(document).ready(function() {
     var arrhides = ["splash", "introduction", "interlude", "fall-main", "spring-main", "interlude-2"];
     var currentsection = getCurrentSection();
     var sectionids = $("section.v").map(function(){return this.id; }).get()
-	
+
 	function update() {
 		console.log('called');
 		var arrclasses = "";
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		}
 		$("body").attr('class',arrclasses + currentsection);
 	}
-	
+
 	function getCurrentSection() {
 		var current = "splash"
 		var sectionids = $("section.v").map(function(){return this.id; }).get()
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		});
 		return current;
 	};
-	
+
 	function up() {
 		 if (sectionids.indexOf(currentsection) != 0) {
             var next = sectionids[sectionids.indexOf(currentsection) - 1];
@@ -46,7 +46,7 @@ $(document).ready(function() {
         }
 		return next;
     };
-	
+
 	function down() {
 		if (sectionids.indexOf(currentsection) != sectionids.length-1) {
             var next = sectionids[sectionids.indexOf(currentsection) + 1];
@@ -60,7 +60,7 @@ $(document).ready(function() {
         }
 		return next;
 	}
-		
+
 	$("section.v").each(function() {
         var id = $(this).attr("id");
         arrindexs[id] = [0];
@@ -71,9 +71,9 @@ $(document).ready(function() {
             margin=margin+100;
         });
     });
-	
+
 	update();
-    
+
 	$(document).keydown(function(e){
 		var code = e.keyCode || e.which;
 		if(code == 38) {
@@ -95,28 +95,28 @@ $(document).ready(function() {
 
     $(".up.arrow").click(function(){currentsection=up();update();});
     $(".down.arrow").click(function(){currentsection=down();update();});
-	$("#menu a").click(function(){
+	$('#menu a[href^="#"]').click(function(){
 		targetsection = $(this).attr('href').substring(1);
 		currentsection=targetsection;
 		update();
 	});
-	
+
     $(".right.arrow").on("click",function() {
         $("#"+currentsection).children("section.h").animate({left:"-=100%"},300);
         arrindexs[currentsection][0] += 1;
 		update();
     });
-	    
+
     $(".left.arrow").on("click",function() {
         $("#"+currentsection).children("section.h").animate({left:"+=100%"},300);
         arrindexs[currentsection][0] -= 1;
 		update();
     });
-	
+
 	$("#menu-icon").on("click",function(){
 		$("#menu").toggle('slide',{direction:'left'},100);
 	})
-	
+
 	// $(document).on("scroll",function() {
 		// var arrclasses = "";
 		// if (arrhides.indexOf(currentsection) != -1) {
