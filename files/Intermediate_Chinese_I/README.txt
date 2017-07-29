@@ -1,4 +1,4 @@
-I took this course at UMass. I am unable to locate the official	course description. It was a pretty standard language learning course. I did not enjoy it very much due to what I felt was an unfairly large workload and a great deal of inflexibility on the part of the instructors.
+I took this course at UMass. I am unable to locate the official	course description. It was a pretty standard language learning course.
 
 NOTE: Unfortunately the majority of my work in this class was handwritten, either freehand essays or problem sets in the workbook. These works have since been lost to the winds of time.
 
